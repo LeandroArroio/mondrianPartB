@@ -1,21 +1,21 @@
 function setup() {
   createCanvas(800, 800); 
-  // Sem o noLoop() para a animação do shake funcionar continuamente
-  frameRate(12); // Reduzimos os frames por segundo para o tremor ser mais suave
+  
+  frameRate(20); 
 }
 
 function draw() {
   background(255); 
   
   let white = color(245, 245, 240);
-  let red = color(238, 36, 0);      // Voltou à cor original sem o random
+  let red = color(238, 36, 0);      
   let yellow = color(253, 219, 0);  
   let blue = color(32, 27, 113);    
 
   noStroke(); 
   
   fill(red);
-  rect(0, 0, 360, 320); 
+  rect(0 , 0, 360, 320); 
   
   fill(white);
   rect(360, 0, 440, 320);
@@ -45,9 +45,7 @@ function draw() {
   strokeWeight(15);     
   strokeCap(SQUARE);    
 
-  // SHAKE EFFECT (Tremor nas linhas)
-  let shakeY = random(-1.5, 1.5); 
-  let shakeX = random(-1.5, 1.5);
+  let shakeY = random(-2, 1.5); 
 
   // Linhas horizontais
   line(0, 320 + shakeY, 800, 320 + shakeY);   
@@ -55,7 +53,7 @@ function draw() {
   line(360, 740, 600, 740); 
 
   // Linhas verticais
-  line(360 + shakeX, 0, 360 + shakeX, 800);   
+  line(360, 0, 360, 800);   
   line(80, 520, 80, 800);   
   line(600, 520, 600, 800); 
 }
