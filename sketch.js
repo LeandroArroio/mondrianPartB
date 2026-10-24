@@ -47,12 +47,11 @@ function draw() {
 
   let shakeY = random(-2, 1.5); 
 
-  // Linhas horizontais
+  
   line(0, 320 + shakeY, 800, 320 + shakeY);   
   line(0, 520, 800, 520);   
   line(360, 740, 600, 740); 
 
-  // Linhas verticais
   line(360, 0, 360, 800);   
   line(80, 520, 80, 800);   
   line(600, 520, 600, 800); 
